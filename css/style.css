@@ -1,0 +1,422 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+body {
+  background-color: #F5F1E8;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #333;
+  line-height: 1.8;
+}
+
+header {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header,
+footer {
+  background-color: #3A6344;
+  color: white;
+  border-radius: 0;
+}
+
+/* --- Heroセクションのスタイル例 --- */
+.hero {
+  height: 420px;
+  background-image: url('../images/hero.webp');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  border-bottom: 6px solid #f4f4f4;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  border: none; /* 見出しの線を消す */
+  margin-bottom: 10px;
+  color: white; /* hero内だけ白文字 */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.15);
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+
+h2 {
+  color: #4E7C9A;
+  border-bottom: 2px solid #3A6344;
+  padding-left: 10px;
+  text-align: center;
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    position: relative;
+}
+nav a:hover {
+  color: #FFD2A0;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.accent {
+  color: #c26d3c;
+  border-bottom: 2px solid #c26d3c;
+  padding-bottom: 2px;
+}
+
+.activity-cards {
+  display: flex;
+  gap: 20px;
+}
+.card {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-6px);
+}
+.card img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 15px 0;
+  display: block;
+}
+
+
+/* ---フォームの設定---- */
+.center-text {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto 60px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box; /* 枠線を含めた幅にする */
+}
+.submit-btn {
+  background: #E67E22;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.submit-btn:hover {
+  background: #e67e22;
+  transform: translateY(-2px);
+}
+/* チェックボックス全体の囲い */
+.checkbox-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2列に並べる */
+    gap: 10px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+/* チェックボックスのラベル */
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: normal !important; /* ラベルの太字を解除 */
+}
+/* チェックボックス本体のサイズ調整 */
+.checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* ---- フッター ---- */
+footer {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+.footer-info {
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+.footer-info p {
+  margin: 5px 0;
+}
+.footer-info a {
+  color: white;
+  text-decoration: underline;
+}
+.copyright {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    border-top: 1px solid rgba(255,255,255,0.2); /* 線を入れて区切る */
+    padding-top: 15px;
+}
+
+/* リンク先へ飛んだ時、ヘッダーの下に来る設定 */
+#about, #activity, #news, #contact  {
+    scroll-margin-top: 150px;
+}
+#event,#spot,#volunteer {
+  scroll-margin-top: 150px;
+}
+
+
+/* --- スマホメニュー(ハンバーガー) --- */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+  padding: 10px;
+}
+/* 三本線そのもののデザイン */
+.hamburger span {
+  display: block;
+  width: 25px;   /* 線の長さ */
+  height: 2px;   /* 線の太さ */
+  background: white; /* 線の色 */
+  margin: 6px 0; /* 線同士の間隔 */
+  transition: 0.3s; /* 動くスピード */
+}
+/* メニューが開いている時の背景オーバーレイ（後ほどJSで制御） */
+body.menu-open::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* 背景を50%暗く */
+  z-index: 999;
+  animation: fadeIn 0.3s;
+}
+/* メニューが開いた時（activeクラス）の線の動き */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0; /* 真ん中の線を消す */
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+/* Topへ戻る */
+#toTop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: none;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: #E67E22;
+  color: white;
+  cursor: pointer;
+  z-index: 100;
+}
+
+/*-----イベントページの設定------*/
+.activity-category {
+  margin-top: 60px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+/* activity.html の各セクションに下の余白を作る */
+.activity-category {
+    margin-bottom: 60px; /* ここで隙間を調整してね */
+}
+
+/* --- お知らせのリンク（index.html） --- */
+.news-list li a {
+    color: #333; /* 文字色 */
+    text-decoration: underline; /* 常に下線を表示 */
+    text-decoration-color: #3A6344; /* 下線だけに色をつけるとおしゃれ */
+    transition: 0.3s;
+}
+
+.news-list li a:hover {
+    color: #E67E22; /* ホバー時にオレンジへ */
+    text-decoration-color: #E67E22;
+}
+
+/* --- カード内の詳細リンク（index.html, activity.html） --- */
+.card a {
+    color: #3A6344; /* 深緑 */
+    text-decoration: underline; /* 下線をつける */
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.card a:hover {
+    color: #E67E22; /* ホバーでオレンジ */
+    transform: translateX(5px); /* 右にひょこっと動かす */
+}
+
+/* カフェサイトへのボタンリンク */
+.btn-link {
+    background-color: #E67E22;
+    color: white !important; /* 強制的に白にする */
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-link:hover {
+    background-color: #d35400; /* 少し濃いオレンジ */
+    transform: translateY(-2px);
+}
+
+
+/* --- メディアクエリ --- */
+@media (max-width: 768px) {
+
+  .activity-cards {
+    flex-direction: column;
+  }
+
+  .hamburger {
+    display: block;
+    }
+
+  /* スマホの時、右側にメニューを隠しておく */
+  nav ul {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: -100%; /* これで画面の外に隠れる */
+    width: 40%;    /* メニューの幅 */
+    height: 100vh;
+    background-color: rgba(111,175,122,0.85); /*背景の色 */
+    backdrop-filter: blur(4px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    z-index: 1000;
+    transition: 0.4s; /* スライドする動き */
+    }
+
+  /* ボタンを押したとき（activeクラス）に画面内に入れる */
+  nav ul.active {
+    right: 0;
+  }
+  /* メニュー内の文字の設定 */
+  nav ul li a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .checkbox-group {
+    grid-template-columns: 1fr;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
