@@ -79,6 +79,7 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  z-index: 999;
 }
 
 nav a {
@@ -245,6 +246,7 @@ footer {
   cursor: pointer;
   z-index: 1100;
   padding: 10px;
+  position: relative;
 }
 /* 三本線そのもののデザイン */
 .hamburger span {
@@ -276,6 +278,21 @@ body.menu-open::before {
 }
 .hamburger.active span:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+nav {
+  position: relative;
 }
 
 @keyframes fadeIn {

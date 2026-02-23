@@ -14,7 +14,16 @@
 <body>
 <header>
   <h1>街づくりラボ &nbsp; ASOBI-X</h1>
+    <nav class="nav">
+    <button class="nav-close" aria-label="メニューを閉じる"></button>
 
+        <ul>
+            <li><a href="#about">ASOBI-Xとは</a></li>
+            <li><a href="#activity">活動内容</a></li>
+            <li><a href="#news">お知らせ</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+    </nav>
     <nav>
         <ul id="navMenu">
             <li><a href="#about">ASOBI-Xとは</a></li>
@@ -200,6 +209,14 @@
   navMenu.classList.toggle("active");
   body.classList.toggle("menu-open"); // 背景を暗くするクラスを付け外し
   });
+
+  const closeBtn = document.querySelector(".nav-close");
+
+  closeBtn.addEventListener("click", () => {
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+  body.classList.remove("menu-open");
+});
 
   // リンクをクリックしたら閉じる
   const navLinks = document.querySelectorAll("#navMenu a");
